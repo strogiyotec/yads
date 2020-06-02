@@ -14,6 +14,8 @@ ZSH_THEME="amuse"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+#bitwarden
+source $HOME/.config/zsh/bitwarden.sh
 #vim
 source $HOME/.config/zsh/vim_completion.sh
 #sdkman
