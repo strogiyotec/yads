@@ -1,0 +1,8 @@
+set surround 
+
+
+nnoremap <Leader>o o<Esc>
+nnoremap <Leader>O O<Esc>
+
+inoremap jj <Esc>
+
