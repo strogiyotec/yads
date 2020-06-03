@@ -159,3 +159,4 @@ set tabstop=4
 		"
 "Run xrdb whenever Xdefaults or Xresources are updated.
 autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
