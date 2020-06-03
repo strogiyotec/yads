@@ -56,9 +56,8 @@ set tabstop=4
 		colorscheme gruvbox
 		"fix theme when inside tmux
 		set t_Co=256
-		"dark back
-		set background=dark
-		
+		set background=dark		
+		hi Normal guibg=NONE ctermbg=NONE
 "Limelight
 		"when in lightmode then all code is grey 
         let g:limelight_conceal_ctermfg = 240

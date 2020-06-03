@@ -58,6 +58,9 @@ scrolling:
    history: 10000
    multiplier: 3
    faux_muliplier: 3
+cursor:
+  unfocused_hollow: true
+
 
 key_bindings: 
   - { key: PageUp,   mods: Shift,   action: ScrollPageUp   }
