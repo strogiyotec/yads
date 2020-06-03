@@ -159,4 +159,9 @@ set tabstop=4
 		"
 "Run xrdb whenever Xdefaults or Xresources are updated.
 autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
+
+"Tmux
+		"Fix cursor in tmux
+		let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
+		"Hide status bar inside vim
+		autocmd VimEnter,VimLeave * silent !tmux set status
