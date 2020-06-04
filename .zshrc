@@ -22,6 +22,8 @@ source $HOME/.config/zsh/vim_completion.sh
 source $HOME/.sdkman/bin/sdkman-init.sh
 #aliases
 source $HOME/.config/bash/.bash_aliases
+#secret aliases
+source $HOME/.config/bash/.secret_aliases.sh
 #fzf
 source $HOME/.config/bash/.fzf.bash
 #autojump
