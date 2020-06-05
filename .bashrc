@@ -55,8 +55,8 @@ export PATH=/opt/firefox/firefox:$PATH
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/strogiyotec/.sdkman"
-[[ -s "/home/strogiyotec/.sdkman/bin/sdkman-init.sh" ]] && source "/home/strogiyotec/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 #fzf finder
 source $HOME/.config/bash/.fzf.bash

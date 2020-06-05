@@ -1,7 +1,7 @@
 #DB
 alias dbc='pgcli -U postgres --auto-vertical-output'
 alias stag='history | grep tag'
-alias gua='/home/strogiyotec/Cuba/gradle-4.10.3/bin/gradle uA'
+alias gua='$HOME/Cuba/gradle-4.10.3/bin/gradle uA'
 #GIT
 alias gitpt='git push --tags'
 alias gitmd='get merge develop'
@@ -20,7 +20,7 @@ alias v='nvim'
 alias ls='ls -ahN --color=auto --group-directories-first'
 alias sourcez='source ~/.zshrc'
 alias size='du -sh -- *'
-alias zenvpn='sudo openvpn --config /home/strogiyotec/Downloads/zenvpn.ovpn'
+alias zenvpn='sudo openvpn --config $HOME/Downloads/zenvpn.ovpn'
 alias servicesa='sudo service --status-all | grep +'
 alias atu='sudo apt update'
 alias night='redshift -l 45:-48'
@@ -35,7 +35,7 @@ alias ohmyzsh="nvim ~/.oh-my-zsh"
 #Scripts
 alias img='~/.config/scripts/img.sh'
 alias fzf_search='~/.config/scripts/fzf_search.sh'
-alias zaread='/home/strogiyotec/.config/zaread/zaread/zaread'
+alias zaread='$HOME/.config/zaread/zaread/zaread'
 alias vocabulary='sc-im ~/Documents/Dictionary/words.sc'
 alias r='ranger'
 alias green='setsid ~/.config/scripts/greenclip daemon  >/dev/null 2>&1 < /dev/null &'

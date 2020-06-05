@@ -1,4 +1,4 @@
-export ZSH="/home/strogiyotec/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # History
 HISTSIZE=100000
