@@ -39,7 +39,6 @@ alias zaread='$HOME/.config/zaread/zaread/zaread'
 alias vocabulary='sc-im ~/Documents/Dictionary/words.sc'
 alias r='ranger'
 alias green='setsid ~/.config/scripts/greenclip daemon  >/dev/null 2>&1 < /dev/null &'
-alias pomo='~/.config/scripts/pomo'
 
 #Jump to dir 
 alias scr='cd ~/.config/scripts'
