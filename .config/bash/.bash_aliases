@@ -47,3 +47,5 @@ alias scr='cd ~/.config/scripts'
 # Dot files
 alias conf='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cpm='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME push -u origin master' 
+alias confs='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME status'
+alias confa='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME add'
