@@ -24,7 +24,7 @@ alias zenvpn='sudo openvpn --config $HOME/Downloads/zenvpn.ovpn'
 alias servicesa='sudo service --status-all | grep +'
 alias atu='sudo apt update'
 alias night='redshift -l 45:-48'
-alias top='ytop -c monokai'
+alias top='btm'
 #Open files
 alias cfal='nvim ~/.config/bash/.bash_aliases'
 alias cfv='nvim ~/.config/nvim/init.vim'
