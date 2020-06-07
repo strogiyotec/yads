@@ -38,6 +38,8 @@ set tabstop=4
 		Plug 'psliwka/vim-smoothie'
 		"s and S for search
 		Plug 'justinmk/vim-sneak'
+		"Emmet
+		Plug 'mattn/emmet-vim'
 		call plug#end()
 
 "Vim wiki
@@ -165,3 +167,5 @@ autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
 		let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
 		"Hide status bar inside vim
 		autocmd VimEnter,VimLeave * silent !tmux set status
+"Emmet
+source ~/.config/nvim/emmet.vim
