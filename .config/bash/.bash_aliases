@@ -27,6 +27,7 @@ alias night='redshift -l 45:-48'
 alias top='btm'
 #Open files
 alias cfal='nvim ~/.config/bash/.bash_aliases'
+alias gcal='gcalcli'
 alias cfv='nvim ~/.config/nvim/init.vim'
 alias cfa='nvim ~/.config/alacritty/alacritty.yml'
 alias cfz='nvim ~/.zshrc'
