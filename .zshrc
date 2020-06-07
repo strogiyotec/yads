@@ -9,7 +9,7 @@ setopt HIST_IGNORE_DUPS
 bindkey '^R' history-incremental-search-backward
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="amuse"
+ZSH_THEME="avit"
 
 plugins=(git)
 
