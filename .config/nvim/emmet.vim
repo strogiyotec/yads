@@ -5,4 +5,4 @@ let g:user_emmet_leader_key=','
 "Enable in all mods
 let g:user_emmet_mode='a'
 "Emmet works only for html and css files
-autocmd FileType html,css EmmetInstall
+autocmd FileType html,css,js EmmetInstall

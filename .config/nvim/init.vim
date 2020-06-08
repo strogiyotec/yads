@@ -40,6 +40,10 @@ set tabstop=4
 		Plug 'justinmk/vim-sneak'
 		"Emmet
 		Plug 'mattn/emmet-vim'
+		"Prettier
+		Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 		call plug#end()
 
 "Vim wiki
