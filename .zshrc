@@ -37,4 +37,11 @@ export READER="zathura"
 #translation
 export PATH=~/.config/rofi/rofi-tr/rofi-translate:$PATH
 
+#open tmux by default
+case $- in *i*)
+    [ -z "$TMUX" ] && exec tmux
+esac
+
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
