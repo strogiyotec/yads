@@ -46,16 +46,8 @@ set tabstop=4
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 		call plug#end()
 
-"Vim wiki
-		"Vimwiki will use markdown syntax
-		let g:vimwiki_list = [{'path': '~/vimwiki','syntax': 'markdown', 'ext': '.md'}]
-		
-"Markdown
-		"Disable server autostart
-		let g:mkdp_auto_start = 0
-		"Disable refresh during typing
-		let g:mkdp_refresh_slow = 1
-		nmap <leader>m <Plug>MarkdownPreview
+"Wiki
+source ~/.config/nvim/wiki.vim
 
 "Color schema
 		"set default color theme
