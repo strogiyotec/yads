@@ -87,6 +87,8 @@ source ~/.config/nvim/wiki.vim
 		"jj - normal mode
 		inoremap jj <esc>
 		
+		"Run xrdb whenever Xdefaults or Xresources are updated.
+		autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
 "Rainbow
 		"enable brackets for all files
 		let g:rainbow_active=1
@@ -155,8 +157,6 @@ source ~/.config/nvim/wiki.vim
 		"Add **\r** on b
 		let b:surround_{char2nr('*')} = "**\r**"
 		"
-"Run xrdb whenever Xdefaults or Xresources are updated.
-autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
 
 "Tmux
 		"Fix cursor in tmux
