@@ -49,3 +49,8 @@ alias conf='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cpm='git --git-dir=$HOME/.cfg/ --work-tree=$HOME push -u origin master' 
 alias confs='git --git-dir=$HOME/.cfg/ --work-tree=$HOME status'
 alias confa='git --git-dir=$HOME/.cfg/ --work-tree=$HOME add'
+
+#Sdkman
+alias sdkj8='sdk use java 8.0.252.hs-adpt'
+alias sdkj11='sdk use java 20.0.0.r11-grl'
+alias sdkj8='sdk use java 8.0.252.hs-adpt'
