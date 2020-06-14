@@ -20,8 +20,6 @@ set tabstop=4
 		Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 		"Vim go
 		Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-		"Split join Go structures
-		Plug 'AndrewRadev/splitjoin.vim'
 		"Ctrl+f for search
 		Plug 'ctrlpvim/ctrlp.vim'
 		"Lightmode for text paragraphs
