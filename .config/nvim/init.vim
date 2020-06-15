@@ -1,9 +1,8 @@
 set number           "add line number
-set hlsearch         "add highlight when search
 set incsearch        "start searching as soon as you type
 syntax enable        "highligh syntax
 set tabstop=4
-
+set inccommand=split "interactive search replace
 "Plugins
 		call plug#begin('~/.vim/plugged')
 		"brackets
