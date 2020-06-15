@@ -35,6 +35,8 @@ set inccommand=split "interactive search replace
 		Plug 'psliwka/vim-smoothie'
 		"s and S for search
 		Plug 'justinmk/vim-sneak'
+		"Calendar
+		Plug 'itchyny/calendar.vim'
 		"Emmet
 		Plug 'mattn/emmet-vim'
 		"Prettier
@@ -162,3 +164,5 @@ source ~/.config/nvim/wiki.vim
 		autocmd VimEnter,VimLeave * silent !tmux set status
 "Emmet
 source ~/.config/nvim/emmet.vim
+"Calendar
+source ~/.config/nvim/calendar.vim
