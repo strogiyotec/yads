@@ -1,7 +1,7 @@
 #DB
 alias dbc='pgcli -U postgres --auto-vertical-output'
 alias stag='history | grep tag'
-alias gua='$HOME/Cuba/gradle-4.10.3/bin/gradle uA'
+alias gua='$HOME/Java/gradle-4.10.3/bin/gradle uA'
 #GIT
 alias gitpt='git push --tags'
 alias gitmd='get merge develop'
@@ -47,11 +47,12 @@ alias confs='git --git-dir=$HOME/.cfg/ --work-tree=$HOME status'
 alias confa='git --git-dir=$HOME/.cfg/ --work-tree=$HOME add'
 
 #Sdkman
-alias sdkj11='sdk use java 20.0.0.r11-grl'
-alias sdkj8='sdk use java 8.0.252.hs-adpt'
+alias sdkj11='sdk default java 20.0.0.r11-grl'
+alias sdkj8='sdk default java 8.0.252.hs-adpt'
 
 #Shortcuts
 alias r='ranger'
 alias task='task rc:~/.config/taskwarrior/.taskrc'
 alias v='nvim'
 alias top='btm'
+alias pomo='pomo -p ~/.config/pomo/.pomo'
