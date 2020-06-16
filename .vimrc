@@ -5,7 +5,7 @@ set incsearch 		 "start searching as soon as you type
 filetype plugin on 
 syntax enable 		 "highligh syntax
 set tabstop=4 
-
+set viminfo+=n~/.vim/viminfo "change viminfo folder
 "Plugins
 	call plug#begin('~/.vim/plugged')
 	"brackets
