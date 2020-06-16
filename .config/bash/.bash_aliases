@@ -16,7 +16,6 @@ alias gitce='git credential-cache exit'
 alias mvncp='mvn clean package -DskipTests'
 alias mvnch='mvn checkstyle:check'
 #UTILS
-alias v='nvim'
 alias ls='ls -ahN --color=auto --group-directories-first'
 alias sourcez='source ~/.zshrc'
 alias size='du -sh -- *'
@@ -24,10 +23,8 @@ alias zenvpn='sudo openvpn --config ~/.config/zenvpn/zenvpn.ovpn'
 alias servicesa='sudo service --status-all | grep +'
 alias atu='sudo apt update'
 alias night='redshift -l 45:-48'
-alias top='btm'
 #Open files
 alias cfal='nvim ~/.config/bash/.bash_aliases'
-alias gcal='gcalcli'
 alias cfv='nvim ~/.config/nvim/init.vim'
 alias cfa='nvim ~/.config/alacritty/alacritty.yml'
 alias cfz='nvim ~/.zshrc'
@@ -38,7 +35,6 @@ alias img='~/.config/scripts/img.sh'
 alias fzf_search='~/.config/scripts/fzf_search.sh'
 alias zaread='$HOME/.config/zaread/zaread/zaread'
 alias vocabulary='sc-im ~/Documents/Dictionary/words.sc'
-alias r='ranger'
 alias green='setsid ~/.config/scripts/greenclip daemon  >/dev/null 2>&1 < /dev/null &'
 
 #Jump to dir 
@@ -51,6 +47,11 @@ alias confs='git --git-dir=$HOME/.cfg/ --work-tree=$HOME status'
 alias confa='git --git-dir=$HOME/.cfg/ --work-tree=$HOME add'
 
 #Sdkman
-alias sdkj8='sdk use java 8.0.252.hs-adpt'
 alias sdkj11='sdk use java 20.0.0.r11-grl'
 alias sdkj8='sdk use java 8.0.252.hs-adpt'
+
+#Shortcuts
+alias r='ranger'
+alias task='task rc:~/.config/taskwarrior/.taskrc'
+alias v='nvim'
+alias top='btm'
