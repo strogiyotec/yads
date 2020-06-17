@@ -17,7 +17,7 @@ source $ZSH/oh-my-zsh.sh
 #vim
 source $HOME/.config/zsh/vim_completion.sh
 #taskwarrior
-source /home/strogiyotec/.config/zsh/task_warrior.sh
+source $HOME/.config/zsh/task_warrior.sh
 #sdkman
 source $HOME/.sdkman/bin/sdkman-init.sh
 #aliases
@@ -27,7 +27,7 @@ source $HOME/.config/bash/.secret_aliases.sh
 #fzf
 source $HOME/.config/bash/.fzf.bash
 #autojump
-source /usr/share/autojump/autojump.sh
+source $HOME/.config/zsh/autojump.zsh
 
 #fix man
 export MAN_DISABLE_SECCOMP=1
