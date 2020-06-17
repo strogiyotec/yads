@@ -14,10 +14,10 @@ ZSH_THEME="avit"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-#bitwarden
-source $HOME/.config/zsh/bitwarden.sh
 #vim
 source $HOME/.config/zsh/vim_completion.sh
+#taskwarrior
+source /home/strogiyotec/.config/zsh/task_warrior.sh
 #sdkman
 source $HOME/.sdkman/bin/sdkman-init.sh
 #aliases
@@ -31,6 +31,8 @@ source /usr/share/autojump/autojump.sh
 
 #fix man
 export MAN_DISABLE_SECCOMP=1
+
+#Defaults
 export EDITOR=nvim
 export READER="zathura"
 
