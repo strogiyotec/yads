@@ -3,7 +3,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # History
 HISTSIZE=100000
 SAVEHIST=100000
-HISTFILE=~/.config/zsh/history
+HISTFILE=~/.local/share/zsh/history
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_DUPS
 bindkey '^R' history-incremental-search-backward
