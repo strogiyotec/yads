@@ -87,7 +87,19 @@ source ~/.config/nvim/wiki.vim
 		vnoremap K :m '<-2<CR>gv=gv
 		"jj - normal mode
 		inoremap jj <esc>
+
+		"  Copy to clipboard
+		vnoremap  <leader>y  "+y
+		nnoremap  <leader>Y  "+yg_
+		nnoremap  <leader>y  "+y
+		nnoremap  <leader>yy  "+yy
 		
+		"  Paste from clipboard
+		nnoremap <leader>p "+p
+		nnoremap <leader>P "+P
+		vnoremap <leader>p "+p
+		vnoremap <leader>P "+P
+
 		"Run xrdb whenever Xdefaults or Xresources are updated.
 		autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
 "Rainbow
