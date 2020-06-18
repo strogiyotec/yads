@@ -1,5 +1,5 @@
 set surround 
-
+set relativenumber
 
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>

@@ -23,6 +23,7 @@ set inccommand=split "interactive search replace
 		Plug 'ctrlpvim/ctrlp.vim'
 		"Lightmode for text paragraphs
 		Plug 'junegunn/limelight.vim'
+		Plug 'junegunn/goyo.vim'
 		"Vim surround
 		Plug 'tpope/vim-surround'
 		"Close brackets
@@ -54,6 +55,7 @@ source ~/.config/nvim/wiki.vim
 		"fix theme when inside tmux
 		set t_Co=256
 		set background=dark		
+		"Add transparency
 		hi Normal guibg=NONE ctermbg=NONE
 "Limelight
 		"when in lightmode then all code is grey 
@@ -162,7 +164,10 @@ source ~/.config/nvim/wiki.vim
 		let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
 		"Hide status bar inside vim
 		autocmd VimEnter,VimLeave * silent !tmux set status
-"Emmet
-source ~/.config/nvim/emmet.vim
-"Calendar
-source ~/.config/nvim/calendar.vim
+"Source external configs
+		"Emmet
+		source ~/.config/nvim/emmet.vim
+		"Calendar
+		source ~/.config/nvim/calendar.vim
+		source ~/.config/nvim/goyo.vim
+

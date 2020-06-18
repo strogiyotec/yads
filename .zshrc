@@ -39,6 +39,7 @@ export READER="zathura"
 #Clean up home directory
 #Move less config to share
 export LESSHISTFILE="$HOME/.local/share/less/.lesshst"
+export XDG_CONFIG_HOME="$HOME/.config"
 #open tmux by default
 #case $- in *i*)
 #    [ -z "$TMUX" ] && exec tmux
