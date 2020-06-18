@@ -36,6 +36,9 @@ export MAN_DISABLE_SECCOMP=1
 export EDITOR=nvim
 export READER="zathura"
 
+#Clean up home directory
+#Move less config to share
+export LESSHISTFILE="$HOME/.local/share/less/.lesshst"
 #open tmux by default
 #case $- in *i*)
 #    [ -z "$TMUX" ] && exec tmux
