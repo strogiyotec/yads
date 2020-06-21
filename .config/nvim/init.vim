@@ -4,11 +4,9 @@ syntax enable        "highligh syntax
 set tabstop=4
 set inccommand=split "interactive search replace
 "Plugins
-		call plug#begin('~/.vim/plugged')
+		call plug#begin('~/.config/nvim/plugged/')
 		"brackets
 		Plug 'frazrepo/vim-rainbow'
-		"Python completion 
-		Plug 'davidhalter/jedi-vim'
 		"Vim figutive
 		Plug 'tpope/vim-fugitive'
 		"Theme
@@ -40,6 +38,8 @@ set inccommand=split "interactive search replace
 		Plug 'itchyny/calendar.vim'
 		"Emmet
 		Plug 'mattn/emmet-vim'
+		"Cocnvim
+		Plug 'neoclide/coc.nvim', {'branch': 'release'}
 		"Prettier
 		Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
@@ -130,12 +130,14 @@ source ~/.config/nvim/wiki.vim
 		let g:go_auto_type_info = 1
 		"enable :gorename
 		let g:go_rename_command = 'gopls'
+		"gd will be handled my coc
+		let g:go_def_mapping_enabled = 0
 		"\r GoRun
 		autocmd FileType go noremap <silent> <Leader>r :GoRun<CR>
 		"\b GoBuild
 		autocmd FileType go noremap <silent> <Leader>b :GoBuild<CR>
 		"Ctrl space add hint
-		autocmd FileType go inoremap <C-Space> <C-x><C-o>
+"		autocmd FileType go inoremap <C-Space> <C-x><C-o>
 
 "CtrlP
 		"Ignore files
@@ -181,5 +183,7 @@ source ~/.config/nvim/wiki.vim
 		source ~/.config/nvim/emmet.vim
 		"Calendar
 		source ~/.config/nvim/calendar.vim
+		"Goyo
 		source ~/.config/nvim/goyo.vim
-
+		"Cocnvim
+		source ~/.config/nvim/coc.vim
