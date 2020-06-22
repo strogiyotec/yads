@@ -99,7 +99,10 @@ source ~/.config/nvim/wiki.vim
 		nnoremap <leader>P "+P
 		vnoremap <leader>p "+p
 		vnoremap <leader>P "+P
-
+	
+		" Ctrl+s saves changes
+		nmap <C-s> :w<CR>
+		
 		"Run xrdb whenever Xdefaults or Xresources are updated.
 		autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
 "Rainbow
