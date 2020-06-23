@@ -10,7 +10,7 @@ set inccommand=split "interactive search replace
 		"Vim figutive
 		Plug 'tpope/vim-fugitive'
 		"Theme
-		Plug 'morhetz/gruvbox'
+		Plug 'gruvbox-community/gruvbox'
 		"Vimwiki
 		Plug 'vimwiki/vimwiki'
 		"Markdown
