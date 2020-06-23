@@ -81,7 +81,8 @@ source ~/.config/nvim/wiki.vim
 		"\o will create new line without switching to insert mode
 		nnoremap <leader>o o<esc>
 		nnoremap <leader>O O<esc>
-		"Firstly press shift+v then highlight using arrows then press j or k it
+		"Firstly press shift+v then 
+		"highlight using arrows then press j or k it
 		"will move lines up or down
 		vnoremap J :m '>+1<CR>gv=gv
 		vnoremap K :m '<-2<CR>gv=gv
@@ -102,7 +103,6 @@ source ~/.config/nvim/wiki.vim
 	
 		" Ctrl+s saves changes
 		nmap <C-s> :w<CR>
-		
 		"Run xrdb whenever Xdefaults or Xresources are updated.
 		autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
 "Rainbow
@@ -125,23 +125,8 @@ source ~/.config/nvim/wiki.vim
 "Git bindings
 		"Open Gdiff vertically
 		set diffopt+=vertical
-
-"Go bindings
-		"highlight functions
-		let g:go_highlight_functions = 1
-		"when cursor in function it will highligh args for func
-		let g:go_auto_type_info = 1
-		"enable :gorename
-		let g:go_rename_command = 'gopls'
-		"gd will be handled my coc
-		let g:go_def_mapping_enabled = 0
-		"\r GoRun
-		autocmd FileType go noremap <silent> <Leader>r :GoRun<CR>
-		"\b GoBuild
-		autocmd FileType go noremap <silent> <Leader>b :GoBuild<CR>
-		"Ctrl space add hint
-"		autocmd FileType go inoremap <C-Space> <C-x><C-o>
-
+"Go settings
+		source ~/.config/nvim/go.vim
 "CtrlP
 		"Ignore files
 		let g:ctrlp_custom_ignore = {
