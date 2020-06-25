@@ -125,8 +125,10 @@ source ~/.config/nvim/wiki.vim
 "Git bindings
 		"Open Gdiff vertically
 		set diffopt+=vertical
+		
 "Go settings
 		source ~/.config/nvim/go.vim
+		
 "CtrlP
 		"Ignore files
 		let g:ctrlp_custom_ignore = {
