@@ -1,4 +1,8 @@
-export ZSH="$HOME/.oh-my-zsh"
+source ~/.config/antigen/antigen.zsh
+		antigen use oh-my-zsh
+		antigen bundle git
+		antigen theme avit
+		antigen apply
 
 # History
 HISTSIZE=100000
@@ -8,12 +12,6 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_DUPS
 bindkey '^R' history-incremental-search-backward
 
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="avit"
-
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
 #vim
 source $HOME/.config/zsh/vim_completion.sh
 #taskwarrior
@@ -40,14 +38,14 @@ export READER="zathura"
 #Move less config to share
 export LESSHISTFILE="$HOME/.local/share/less/.lesshst"
 export XDG_CONFIG_HOME="$HOME/.config"
-#open tmux by default
-#case $- in *i*)
-#    [ -z "$TMUX" ] && exec tmux
-#esac
 
+export "PATH=$HOME/Java/git-fuzzy/git-fuzzy/bin:$PATH"
+
+#Node version manager
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
