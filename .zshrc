@@ -4,8 +4,8 @@ source $HOME/Java/antigen/antigen/antigen.zsh
 		antigen bundle git
 
 		antigen bundle zsh-users/zsh-syntax-highlighting
-
-		antigen theme robbyrussell
+		
+		antigen theme oxide
 
 		antigen apply
 
