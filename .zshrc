@@ -1,7 +1,12 @@
-source ~/.config/antigen/antigen.zsh
+#Antigen config
+source $HOME/Java/antigen/antigen/antigen.zsh
 		antigen use oh-my-zsh
 		antigen bundle git
-		antigen theme avit
+
+		antigen bundle zsh-users/zsh-syntax-highlighting
+
+		antigen theme robbyrussell
+
 		antigen apply
 
 # History
@@ -46,6 +51,5 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
