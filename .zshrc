@@ -9,6 +9,12 @@ source $HOME/Java/antigen/antigen/antigen.zsh
 
 		antigen apply
 
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)		# Include hidden files.
+#
 # History
 HISTSIZE=100000
 SAVEHIST=100000

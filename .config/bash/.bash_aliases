@@ -29,7 +29,6 @@ alias cfv='nvim ~/.config/nvim/init.vim'
 alias cfa='nvim ~/.config/alacritty/alacritty.yml'
 alias cfz='nvim ~/.zshrc'
 alias cft='nvim ~/.tmux.conf'
-alias ohmyzsh="nvim ~/.oh-my-zsh"
 #Scripts
 alias img='~/.config/scripts/img.sh'
 alias fzf_search='~/.config/scripts/fzf_search.sh'

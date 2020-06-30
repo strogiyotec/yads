@@ -10,7 +10,7 @@
 
 # Use the command 'task show' to see all defaults and overrides
 
-report.list.sort = start+
+report.list.sort = due-
 # Files
 data.location=~/.local/share/taskwarrior/ 
 
