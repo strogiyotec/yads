@@ -46,6 +46,8 @@ source $HOME/Java/antigen/antigen/antigen.zsh
 export MAN_DISABLE_SECCOMP=1
 
 #Default variables
+		#export VIMINIT='source $MYVIMRC'
+		#export MYVIMRC='~/.config/vim/.vimrc'  
 		export EDITOR=nvim
 		export READER="zathura"
 		#Change native image path
