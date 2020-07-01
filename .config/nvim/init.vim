@@ -1,4 +1,5 @@
-set relativenumber           "add line number
+set nu  			 "shows current line number	
+set relativenumber   "add line number
 set incsearch        "start searching as soon as you type
 syntax enable        "highligh syntax
 set tabstop=4

@@ -55,7 +55,6 @@ export MAN_DISABLE_SECCOMP=1
 
 		#Move less config to share
 		export LESSHISTFILE="$HOME/.local/share/less/.lesshst"
-		export XDG_CONFIG_HOME="$HOME/.config"
 
 		#Add git fuzzy
 		export "PATH=$HOME/Java/git-fuzzy/git-fuzzy/bin:$PATH"
@@ -65,3 +64,6 @@ export MAN_DISABLE_SECCOMP=1
 		[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 		[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+#XDG variables
+		export XDG_CONFIG_HOME="$HOME/.config"
+		export XDG_DATA_HOME="$HOME/.local/share"
