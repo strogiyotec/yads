@@ -29,8 +29,6 @@ source $HOME/Java/antigen/antigen/antigen.zsh
 
 		#vim
 		source $HOME/.config/zsh/vim_completion.sh
-		#taskwarrior
-		source $HOME/.config/zsh/task_warrior.sh
 		#sdkman
 		source $HOME/.sdkman/bin/sdkman-init.sh
 		#aliases
