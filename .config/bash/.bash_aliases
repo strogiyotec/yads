@@ -23,6 +23,8 @@ alias zenvpn='sudo openvpn --config ~/.config/zenvpn/zenvpn.ovpn'
 alias servicesa='sudo service --status-all | grep +'
 alias atu='sudo apt update'
 alias night='redshift -l 45:-48'
+alias tl='task list'
+alias count='ls | wc -l'
 #Open files
 alias cfal='nvim ~/.config/bash/.bash_aliases'
 alias cfv='nvim ~/.config/nvim/init.vim'
