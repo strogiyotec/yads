@@ -1,3 +1,4 @@
+set nu  			 "shows current line number	
 set surround 
 set relativenumber
 
