@@ -44,7 +44,7 @@ alias scr='cd ~/.config/scripts'
 # Dot files
 alias conf='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cpm='git --git-dir=$HOME/.cfg/ --work-tree=$HOME push -u origin master' 
-alias confs='git --git-dir=$HOME/.cfg/ --work-tree=$HOME status'
+alias cfs='git --git-dir=$HOME/.cfg/ --work-tree=$HOME status'
 alias confa='git --git-dir=$HOME/.cfg/ --work-tree=$HOME add'
 
 #Sdkman

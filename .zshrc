@@ -32,17 +32,17 @@ source $HOME/Java/antigen/antigen/antigen.zsh
 #Sources
 
 		#vim
-		source $HOME/.config/zsh/vim_completion.sh
+		source $XDG_CONFIG_HOME/zsh/vim_completion.sh
 		#sdkman
 		source $HOME/.sdkman/bin/sdkman-init.sh
 		#aliases
-		source $HOME/.config/bash/.bash_aliases
+		source $XDG_CONFIG_HOME/bash/.bash_aliases
 		#secret aliases
-		source $HOME/.config/bash/.secret_aliases.sh
+		source $XDG_CONFIG_HOME/bash/.secret_aliases.sh
 		#fzf
-		source $HOME/.config/bash/.fzf.bash
+		source $XDG_CONFIG_HOME/bash/.fzf.bash
 		#autojump
-		source $HOME/.config/zsh/autojump.zsh
+		source $XDG_CONFIG_HOME/zsh/autojump.zsh
 
 #fix man
 export MAN_DISABLE_SECCOMP=1
@@ -58,7 +58,7 @@ export MAN_DISABLE_SECCOMP=1
 		export LESSHISTFILE="$XDG_DATA_HOME/less/.lesshst"
 
 		#Node version manager
-		export NVM_DIR="$HOME/.config/nvm"
+		export NVM_DIR="$XDG_CONFIG_HOME/nvm"
 		[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 		[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
