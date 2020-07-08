@@ -1,3 +1,7 @@
+#XDG variables
+		export XDG_CONFIG_HOME="$HOME/.config"
+		export XDG_DATA_HOME="$HOME/.local/share"
+		
 #Antigen config
 source $HOME/Java/antigen/antigen/antigen.zsh
 
@@ -44,24 +48,17 @@ source $HOME/Java/antigen/antigen/antigen.zsh
 export MAN_DISABLE_SECCOMP=1
 
 #Default variables
-		#export VIMINIT='source $MYVIMRC'
-		#export MYVIMRC='~/.config/vim/.vimrc'  
 		export EDITOR=nvim
 		export READER="zathura"
 		#Change native image path
-		export NATIVE_IMAGE_USER_HOME=$HOME/.local/share/native-image/
-
+		export NATIVE_IMAGE_USER_HOME="$XDG_DATA_HOME/native-image/"
+		export NODE_REPL_HISTORY="$XDG_DATA_HOME/node/history"
+		export PSQL_HISTORY="$XDG_DATA_HOME/psql/history"
 		#Move less config to share
-		export LESSHISTFILE="$HOME/.local/share/less/.lesshst"
-
-		#Add git fuzzy
-		export "PATH=$HOME/Java/git-fuzzy/git-fuzzy/bin:$PATH"
+		export LESSHISTFILE="$XDG_DATA_HOME/less/.lesshst"
 
 		#Node version manager
 		export NVM_DIR="$HOME/.config/nvm"
 		[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 		[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-#XDG variables
-		export XDG_CONFIG_HOME="$HOME/.config"
-		export XDG_DATA_HOME="$HOME/.local/share"
