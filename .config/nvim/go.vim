@@ -21,3 +21,5 @@
 		autocmd FileType go nmap <Leader>i <Plug>(go-info)
 		"Ctrl space add hint
 "		autocmd FileType go inoremap <C-Space> <C-x><C-o>
+		"Space u to find usages of function
+		autocmd FileType go nmap <Space>u :GoReferrers<CR>
