@@ -19,7 +19,8 @@ set inccommand=split "interactive search replace
 		"Vim go
 		Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 		"Ctrl+f for search
-		Plug 'ctrlpvim/ctrlp.vim'
+		Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+		Plug 'junegunn/fzf.vim'
 		"Lightmode for text paragraphs
 		Plug 'junegunn/limelight.vim'
 		Plug 'junegunn/goyo.vim'
@@ -130,15 +131,11 @@ source ~/.config/nvim/wiki.vim
 "Go settings
 		source ~/.config/nvim/go.vim
 		
-"CtrlP
-		"Ignore files
-		let g:ctrlp_custom_ignore = {
-				\ 'dir':  '\v[\/]\.(git|hg|svn)$|target/*',
-				\ }
-		"Disable cache
-		let g:ctrlp_use_caching = 0
-		"Activate on Ctrl+F
-		let g:ctrlp_map = '<c-f>'
+"fzf
+		map <C-f> <Esc><Esc>:Files!<CR>
+		inoremap <C-f> <Esc><Esc>:BLines!<CR>
+		map <C-a> <Esc><Esc>:Ag!<CR>
+		map <C-g> <Esc><Esc>:BCommits!<CR>
 
 "Airline
 		let g:airline_detect_modified=1
