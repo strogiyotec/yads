@@ -136,6 +136,7 @@ source ~/.config/nvim/wiki.vim
 		inoremap <C-f> <Esc><Esc>:BLines!<CR>
 		map <C-a> <Esc><Esc>:Ag!<CR>
 		map <C-g> <Esc><Esc>:BCommits!<CR>
+		map <C-b> <Esc><Esc>:Buffers<CR>
 
 "Airline
 		let g:airline_detect_modified=1
