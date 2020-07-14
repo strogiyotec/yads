@@ -48,8 +48,6 @@ set inccommand=split "interactive search replace
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 		call plug#end()
 
-"Wiki
-source ~/.config/nvim/wiki.vim
 
 "Color schema
 		"set default color theme
@@ -176,3 +174,5 @@ source ~/.config/nvim/wiki.vim
 		source ~/.config/nvim/goyo.vim
 		"Cocnvim
 		source ~/.config/nvim/coc.vim
+		"Wiki
+		source ~/.config/nvim/wiki.vim
