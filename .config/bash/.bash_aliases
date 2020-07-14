@@ -1,7 +1,7 @@
 #DB
 alias dbc='pgcli -U postgres --auto-vertical-output'
 alias stag='history | grep tag'
-alias gua='$HOME/Java/gradle-4.10.3/bin/gradle uA'
+alias gua='~/Java/gradle-4.10.3/bin/gradle uA'
 #GIT
 alias gitpt='git push --tags'
 alias gitmd='get merge develop'
@@ -24,6 +24,7 @@ alias servicesa='sudo service --status-all | grep +'
 alias atu='sudo apt update'
 alias night='redshift -l 45:-48'
 alias tl='task list'
+alias ta='jfill task rc:~/.config/taskwarrior/.taskrc add {{description}} due:{{date}} project:{{project}}'
 alias count='ls | wc -l'
 #Open files
 alias cfal='nvim ~/.config/bash/.bash_aliases'
