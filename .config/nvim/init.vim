@@ -6,7 +6,7 @@ set tabstop=4
 set inccommand=split "interactive search replace
 "Plugins
 		call plug#begin('~/.config/nvim/plugged/')
-		"brackets
+		"Colorful brackets
 		Plug 'frazrepo/vim-rainbow'
 		"Vim figutive
 		Plug 'tpope/vim-fugitive'
@@ -14,7 +14,7 @@ set inccommand=split "interactive search replace
 		Plug 'gruvbox-community/gruvbox'
 		"Vimwiki
 		Plug 'vimwiki/vimwiki'
-		"Markdown
+		"Markdown preview
 		Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 		"Vim go
 		Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -32,6 +32,8 @@ set inccommand=split "interactive search replace
 		Plug 'vim-airline/vim-airline'
 		"Snippets
 		Plug 'SirVer/ultisnips'
+		"Tabular
+		Plug 'godlygeek/tabular'
 		"Add smooth scrolling
 		Plug 'psliwka/vim-smoothie'
 		"s and S for search
@@ -132,7 +134,7 @@ set inccommand=split "interactive search replace
 "fzf
 		map <C-f> <Esc><Esc>:Files!<CR>
 		inoremap <C-f> <Esc><Esc>:BLines!<CR>
-		map <C-a> <Esc><Esc>:Ag!<CR>
+		map <C-p> <Esc><Esc>:Ag!<CR>
 		map <C-g> <Esc><Esc>:BCommits!<CR>
 		map <C-b> <Esc><Esc>:Buffers<CR>
 
