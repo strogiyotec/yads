@@ -11,6 +11,9 @@ matches:
   - trigger: ":espanso"
     replace: "Hi there!"
 
+  - trigger: ":email"
+    replace: "almas337519@gmail.com"
+
   - trigger: ":phone"
     replace: "778-580-5183"
 
