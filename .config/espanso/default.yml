@@ -8,8 +8,8 @@
 # it gets replaced by the "replace" string.
 matches:
   # Simple text replacement
-  - trigger: ":espanso"
-    replace: "Hi there!"
+  - trigger: ":id"
+    replace: "300324208"
 
   - trigger: ":email"
     replace: "almas337519@gmail.com"
