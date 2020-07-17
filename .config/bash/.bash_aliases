@@ -56,6 +56,7 @@ alias sdkj8='sdk default java 8.0.252.hs-adpt'
 #Shortcuts
 alias r='ranger'
 alias task='task rc:~/.config/taskwarrior/.taskrc'
+alias wget='wget --hsts-file=~/.local/share/wget/.wget-hsts'
 alias v='nvim'
 alias top='btm'
 alias pomo='pomo -p ~/.config/pomo/.pomo'
