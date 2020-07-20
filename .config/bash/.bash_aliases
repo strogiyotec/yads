@@ -24,6 +24,7 @@ alias servicesa='sudo service --status-all | grep +'
 alias atu='sudo apt update'
 alias night='redshift -l 45:-48'
 alias tl='task list'
+alias tlt='task list due:today'
 alias ta='jfill task rc:~/.config/taskwarrior/.taskrc add {{description}} due:{{date}} project:{{project}}'
 alias count='ls | wc -l'
 #Open files
