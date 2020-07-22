@@ -1,7 +1,7 @@
 #XDG variables
 		export XDG_CONFIG_HOME="$HOME/.config"
 		export XDG_DATA_HOME="$HOME/.local/share"
-		
+		export ADOTDIR="$HOME/.local/share/.antigen"		
 #Antigen config
 source $HOME/Java/antigen/antigen/antigen.zsh
 
@@ -50,9 +50,11 @@ export MAN_DISABLE_SECCOMP=1
 #Default variables
 		export EDITOR=nvim
 		export READER="zathura"
+		export TERMINAL="alacritty"
 		#Change native image path
 		export NATIVE_IMAGE_USER_HOME="$XDG_DATA_HOME/native-image/"
 		export NODE_REPL_HISTORY="$XDG_DATA_HOME/node/history"
+		export CQL_HISTORY="$XDG_DATA_HOME/cassandra"
 		export PSQL_HISTORY="$XDG_DATA_HOME/psql/history"
 		#Move less config to share
 		export LESSHISTFILE="$XDG_DATA_HOME/less/.lesshst"
