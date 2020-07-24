@@ -1,6 +1,7 @@
 set nu  			 "shows current line number	
 set surround 
 set exchange
+set incsearch
 set relativenumber
 
 nnoremap <Leader>o o<Esc>
