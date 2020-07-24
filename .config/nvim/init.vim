@@ -8,8 +8,11 @@ set inccommand=split "interactive search replace
 		call plug#begin('~/.config/nvim/plugged/')
 		"Colorful brackets
 		Plug 'frazrepo/vim-rainbow'
+		
 		"Vim figutive
 		Plug 'tpope/vim-fugitive'
+		"Show git message
+		Plug 'rhysd/git-messenger.vim'
 		"Theme
 		Plug 'gruvbox-community/gruvbox'
 		"Vimwiki
@@ -49,7 +52,9 @@ set inccommand=split "interactive search replace
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 		call plug#end()
-
+"Git
+let g:git_messenger_no_default_mappings=v:true
+nmap <Leader>gm :GitMessenger<CR>
 
 "Color schema
 		"set default color theme
@@ -166,7 +171,7 @@ set inccommand=split "interactive search replace
 		"Fix cursor in tmux
 		let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
 		"Hide status bar inside vim
-		autocmd VimEnter,VimLeave * silent !tmux set status
+		"autocmd VimEnter,VimLeave * silent !tmux set status
 "Source external configs
 		"Emmet
 		source ~/.config/nvim/emmet.vim
