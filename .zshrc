@@ -46,7 +46,7 @@ source $HOME/Java/antigen/antigen/antigen.zsh
 
 #fix man
 export MAN_DISABLE_SECCOMP=1
-
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 #Default variables
 		export EDITOR=nvim
 		export READER="zathura"
