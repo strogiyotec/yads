@@ -6,33 +6,36 @@ set tabstop=4
 set inccommand=split "interactive search replace
 "Plugins
 		call plug#begin('~/.config/nvim/plugged/')
+"Brackets
 		"Colorful brackets
 		Plug 'frazrepo/vim-rainbow'
-		
+		"Close brackets
+		Plug 'cohama/lexima.vim'
+"GIT	
 		"Vim figutive
 		Plug 'tpope/vim-fugitive'
 		"Show git message
 		Plug 'rhysd/git-messenger.vim'
 		"Theme
 		Plug 'gruvbox-community/gruvbox'
+"Notes	
 		"Vimwiki
 		Plug 'vimwiki/vimwiki'
 		"Markdown preview
 		Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+		"Lightmode for text paragraphs
+		Plug 'junegunn/limelight.vim'
+		Plug 'junegunn/goyo.vim'
+"Coding
 		"Vim go
 		Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 		"Ctrl+f for search
 		Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 		Plug 'junegunn/fzf.vim'
-		"Lightmode for text paragraphs
-		Plug 'junegunn/limelight.vim'
-		Plug 'junegunn/goyo.vim'
 		"Vim surround
 		Plug 'tpope/vim-surround'
 		"Exchange
 		Plug 'tommcdo/vim-exchange'
-		"Close brackets
-		Plug 'cohama/lexima.vim'
 		"Airline
 		Plug 'vim-airline/vim-airline'
 		"Snippets
