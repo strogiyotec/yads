@@ -29,6 +29,8 @@ set inccommand=split "interactive search replace
 		Plug 'junegunn/goyo.vim'
 		"Vim surround
 		Plug 'tpope/vim-surround'
+		"Exchange
+		Plug 'tommcdo/vim-exchange'
 		"Close brackets
 		Plug 'cohama/lexima.vim'
 		"Airline
