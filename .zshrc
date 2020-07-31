@@ -47,16 +47,17 @@ source $HOME/Java/antigen/antigen/antigen.zsh
 #fix man
 export MAN_DISABLE_SECCOMP=1
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
 #Default variables
 		export EDITOR=nvim
 		export READER="zathura"
 		export TERMINAL="alacritty"
 		#Change native image path
 		export NATIVE_IMAGE_USER_HOME="$XDG_DATA_HOME/native-image/"
+		#Change files for various history files
 		export NODE_REPL_HISTORY="$XDG_DATA_HOME/node/history"
 		export CQL_HISTORY="$XDG_DATA_HOME/cassandra"
 		export PSQL_HISTORY="$XDG_DATA_HOME/psql/history"
-		#Move less config to share
 		export LESSHISTFILE="$XDG_DATA_HOME/less/.lesshst"
 
 		#Node version manager
