@@ -57,6 +57,7 @@ alias sdkj8='sdk default java 8.0.252.hs-adpt'
 
 #Shortcuts
 alias r='ranger'
+alias news='newsboat'
 alias task='task rc:~/.config/taskwarrior/.taskrc'
 alias wget='wget --hsts-file=~/.local/share/wget/.wget-hsts'
 alias v='nvim'
