@@ -40,6 +40,8 @@ set inccommand=split "interactive search replace
 		Plug 'vim-airline/vim-airline'
 		"Snippets
 		Plug 'SirVer/ultisnips'
+		"Comments
+		Plug 'tpope/vim-commentary'
 		"Tabular
 		Plug 'godlygeek/tabular'
 		"Add smooth scrolling
