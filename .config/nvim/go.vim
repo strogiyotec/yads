@@ -13,7 +13,7 @@
 		let g:go_highlight_operators = 1
 		"\r GoRun
 		autocmd FileType go noremap <silent> <Leader>r :GoRun<CR>
-		"\h highligh
+		"\h highlight
 		autocmd FileType go noremap <silent> <Leader>h :GoSameIds<CR>
 		"\b GoBuild
 		autocmd FileType go noremap <silent> <Leader>b :GoBuild<CR>
