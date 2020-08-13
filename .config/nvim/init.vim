@@ -26,6 +26,8 @@ set inccommand=split "interactive search replace
 		"Lightmode for text paragraphs
 		Plug 'junegunn/limelight.vim'
 		Plug 'junegunn/goyo.vim'
+		"Grammar
+		Plug 'rhysd/vim-grammarous'
 "Coding
 		"Vim go
 		Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
