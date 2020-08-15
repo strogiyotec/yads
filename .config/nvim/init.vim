@@ -29,6 +29,8 @@ set inccommand=split "interactive search replace
 		"Grammar
 		Plug 'rhysd/vim-grammarous'
 "Coding
+		"Http
+		Plug 'bayne/vim-dot-http'
 		"Vim go
 		Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 		"Ctrl+f for search
