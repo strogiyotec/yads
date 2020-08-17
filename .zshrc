@@ -58,6 +58,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 		export NODE_REPL_HISTORY="$XDG_DATA_HOME/node/history"
 		export CQL_HISTORY="$XDG_DATA_HOME/cassandra"
 		export PSQL_HISTORY="$XDG_DATA_HOME/psql/history"
+		export LEDGER_FILE="$XDG_DATA_HOME/hledger/2020.journal"
 		export LESSHISTFILE="$XDG_DATA_HOME/less/.lesshst"
 
 		#Node version manager
