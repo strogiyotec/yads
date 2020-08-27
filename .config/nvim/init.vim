@@ -16,6 +16,8 @@ set inccommand=split "interactive search replace
 		Plug 'tpope/vim-fugitive'
 		"Show git message
 		Plug 'rhysd/git-messenger.vim'
+
+		Plug 'junegunn/gv.vim'
 		"Theme
 		Plug 'gruvbox-community/gruvbox'
 "Notes	
