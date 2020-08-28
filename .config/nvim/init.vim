@@ -16,8 +16,10 @@ set inccommand=split "interactive search replace
 		Plug 'tpope/vim-fugitive'
 		"Show git message
 		Plug 'rhysd/git-messenger.vim'
-
+		"Git log visualization
 		Plug 'junegunn/gv.vim'
+		"Undo tree
+		Plug 'mbbill/undotree'
 		"Theme
 		Plug 'gruvbox-community/gruvbox'
 "Notes	
@@ -178,7 +180,12 @@ nmap <Leader>gm :GitMessenger<CR>
         nmap yG  <Plug>YSurround
 		"Add **\r** on b
 		let b:surround_{char2nr('*')} = "**\r**"
-		"
+"Undotree
+		if has("persistent_undo")
+		    set undodir="/tmp/.undodir"
+			set undofile
+		endif
+		nnoremap <leader>t :UndotreeToggle<cr>	
 
 "Tmux
 		"Fix cursor in tmux
