@@ -186,6 +186,8 @@ nmap <Leader>gm :GitMessenger<CR>
 			set undofile
 		endif
 		nnoremap <leader>t :UndotreeToggle<cr>	
+"GV
+		nnoremap <leader>gv :GV!<cr>
 
 "Tmux
 		"Fix cursor in tmux
