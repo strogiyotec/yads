@@ -22,6 +22,8 @@ set inccommand=split "interactive search replace
 		Plug 'mbbill/undotree'
 		"Theme
 		Plug 'gruvbox-community/gruvbox'
+		"Lua syntax
+		Plug 'tbastos/vim-lua'
 "Notes	
 		"Vimwiki
 		Plug 'vimwiki/vimwiki'
