@@ -14,6 +14,9 @@ matches:
   - trigger: ":email"
     replace: "almas337519@gmail.com"
 
+  - trigger: ":zip"
+    replace: "V3M 1M8"
+
   - trigger: ":phone"
     replace: "778-580-5183"
 
