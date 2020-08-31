@@ -19,6 +19,10 @@
 		autocmd FileType go noremap <silent> <Leader>b :GoBuild<CR>
 		"\i show info
 		autocmd FileType go nmap <Leader>i <Plug>(go-info)
+		"\u references to method
+		autocmd FileType go nmap <Leader>u :GoReferrers<CR>
+		"\n debug next
+		autocmd FileType go nmap <Leader>u :GoDebugNext<CR>
 		"Ctrl space add hint
 "		autocmd FileType go inoremap <C-Space> <C-x><C-o>
 		"Space u to find usages of function
