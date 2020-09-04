@@ -50,7 +50,7 @@ JAVA_HOME=/usr/lib/jvm/java-11-oracle
 export JAVA_HOME 
 PATH=$PATH:$JAVA_HOME
 export PATH
-
+export XDG_CONFIG_HOME="$HOME/.config"
 export PATH=/opt/firefox/firefox:$PATH
 
 

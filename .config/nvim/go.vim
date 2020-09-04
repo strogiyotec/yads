@@ -11,6 +11,7 @@
 		let g:go_def_mapping_enabled = 0
 		"Highlight operators
 		let g:go_highlight_operators = 1
+     	let g:go_highlight_debug = 1
 		"\r GoRun
 		autocmd FileType go noremap <silent> <Leader>r :GoRun<CR>
 		"\h highlight
@@ -22,8 +23,6 @@
 		"\u references to method
 		autocmd FileType go nmap <Leader>u :GoReferrers<CR>
 		"\n debug next
-		autocmd FileType go nmap <Leader>u :GoDebugNext<CR>
-		"Ctrl space add hint
-"		autocmd FileType go inoremap <C-Space> <C-x><C-o>
-		"Space u to find usages of function
-		autocmd FileType go nmap <Space>u :GoReferrers<CR>
+		autocmd FileType go nmap <Leader>n :GoDebugNext<CR>
+		"/d start debug
+		autocmd FileType go nmap <Leader>d :GoDebugStart<CR>

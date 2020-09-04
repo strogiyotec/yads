@@ -20,10 +20,13 @@ set inccommand=split "interactive search replace
 		Plug 'junegunn/gv.vim'
 		"Undo tree
 		Plug 'mbbill/undotree'
-		"Theme
+"Themes
+		"Gruvbox
 		Plug 'gruvbox-community/gruvbox'
 		"Lua syntax
 		Plug 'tbastos/vim-lua'
+		"Palen
+		Plug 'drewtempelmeyer/palenight.vim'
 "Notes	
 		"Vimwiki
 		Plug 'vimwiki/vimwiki'
@@ -75,7 +78,11 @@ nmap <Leader>gm :GitMessenger<CR>
 
 "Color schema
 		"set default color theme
-		colorscheme gruvbox
+		let g:palenight_terminal_italics=1
+		if (has("termguicolors"))
+				set termguicolors
+		endif
+		colorscheme palenight
 		"fix theme when inside tmux
 		set t_Co=256
 		set background=dark		
@@ -162,7 +169,7 @@ nmap <Leader>gm :GitMessenger<CR>
 
 "Airline
 		let g:airline_detect_modified=1
-		let g:airline_theme='dark'
+		let g:airline_theme='palenight'
 		let g:airline#extensions#po#enabled = 0
 		let g:airline#extensions#whitespace#enabled = 0
 		
