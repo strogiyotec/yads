@@ -1,6 +1,9 @@
 "Go bindings
 		"highlight functions
 		let g:go_highlight_functions = 1
+		"Highlight extra types
+		let g:go_highlight_extra_types = 1
+		let g:go_highlight_types = 0
 		"when cursor in function it will highligh args for func
 		let g:go_auto_type_info = 1
 		"enable :gorename
