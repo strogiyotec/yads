@@ -51,8 +51,6 @@ set inccommand=split "interactive search replace
 		Plug 'tommcdo/vim-exchange'
 		"Airline
 		Plug 'vim-airline/vim-airline'
-		"Snippets
-		Plug 'SirVer/ultisnips'
 		"Comments
 		Plug 'tpope/vim-commentary'
 		"Tabular
