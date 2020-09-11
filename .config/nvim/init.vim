@@ -65,10 +65,6 @@ set inccommand=split "interactive search replace
 		Plug 'mattn/emmet-vim'
 		"Cocnvim
 		Plug 'neoclide/coc.nvim', {'branch': 'release'}
-		"Prettier
-		Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 		call plug#end()
 "Git
 let g:git_messenger_no_default_mappings=v:true
