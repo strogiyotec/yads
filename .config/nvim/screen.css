@@ -160,7 +160,7 @@ body {
 	overflow: hidden;
 	background: transparent;
 	border: 0;
-	border-bottom: 1px solid #dfe2e5;
+	border-bottom: 1px solid green;
 }
 
 .markdown-body hr:after,
@@ -688,7 +688,7 @@ body {
 .markdown-body h1,
 .markdown-body h2 {
 	padding-bottom: 0.3em;
-	border-bottom: 1px solid #eaecef;
+	border-bottom: 5px solid yellow;
 }
 
 .markdown-body h2 {
