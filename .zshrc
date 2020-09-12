@@ -14,10 +14,6 @@ export XDG_DATA_HOME="$HOME/.local/share"
 		export LEDGER_FILE="$XDG_DATA_HOME/hledger/2020.journal"
 		export LESSHISTFILE="$XDG_DATA_HOME/less/.lesshst"
 
-		#Node version manager
-		export NVM_DIR="$XDG_CONFIG_HOME/nvm"
-		[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-		[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 #Themes
 source $XDG_CONFIG_HOME/zsh/af-magic.zsh-theme
 
@@ -75,6 +71,10 @@ rangercd () {
 }
 bindkey -s '^o' 'rangercd\n'
 
+#Node version manager
+		export NVM_DIR="$XDG_CONFIG_HOME/nvm"
+		[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+		[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # auto suggestion
 source $XDG_CONFIG_HOME/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Syntax highlight
