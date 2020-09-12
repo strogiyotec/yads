@@ -60,6 +60,7 @@ alias sdkj8='sdk default java 8.0.252.hs-adpt'
 #Shortcuts
 alias pomo='pomo -p  ~/.config/pomo/.pomo/config.json'
 alias r='ranger'
+alias tmux='tmux -f ~/.config/tmux/.tmux.conf'
 alias news='newsboat'
 alias z='zathura'
 alias task='task rc:~/.config/taskwarrior/.taskrc'
