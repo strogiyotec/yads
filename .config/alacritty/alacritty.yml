@@ -63,9 +63,9 @@ cursor:
 
 
 key_bindings: 
-  - { key: PageUp,   mods: Shift,   action: ScrollPageUp   }
-  - { key: PageDown, mods: Shift,   action: ScrollPageDown }
-  - { key: End,      mods: Shift,   action: ScrollToBottom }
+  - { key: K,   mods: Control,   action: ScrollPageUp   }
+  - { key: J, mods: Control,   action: ScrollPageDown }
+  - { key: G,      mods: Control,   action: ScrollToBottom }
   - { key: Home,     mods: Shift,   action: ScrollToTop    }
   - { key: Equals,   mods: Control,       action: IncreaseFontSize }
   - { key: Add,      mods: Control,       action: IncreaseFontSize }
