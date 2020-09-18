@@ -134,7 +134,7 @@ nmap <Leader>gm :GitMessenger<CR>
 		"enable brackets for all files
 		let g:rainbow_active=1
 		"rainbow colors
-		let g:rainbow_ctermfgs = ['darkblue', 'darkgreen', 'darkyellow', 'darkred', 'magenta']
+		let g:rainbow_ctermfgs = ['darkblue', 'darkgreen', 'darkyellow', 'magenta']
 		
 "Directories
 		"Remove banner

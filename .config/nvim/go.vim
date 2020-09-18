@@ -25,7 +25,5 @@
 		autocmd FileType go nmap <Leader>i <Plug>(go-info)
 		"\u references to method
 		autocmd FileType go nmap <Leader>u :GoReferrers<CR>
-		"\n debug next
-		autocmd FileType go nmap <Leader>n :GoDebugNext<CR>
 		"/d start debug
 		autocmd FileType go nmap <Leader>d :GoDebugStart<CR>
