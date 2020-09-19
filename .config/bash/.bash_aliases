@@ -29,6 +29,7 @@ alias tlt='task list due:today'
 alias ta='jfill task rc:~/.config/taskwarrior/.taskrc add {{description}} due:{{date}} project:{{project}}'
 alias count='ls | wc -l'
 #Config files
+alias cfaw='nvim ~/.config/awesome/rc.lua'
 alias cfal='nvim ~/.config/bash/.bash_aliases'
 alias cfv='nvim ~/.config/nvim/init.vim'
 alias cfa='nvim ~/.config/alacritty/alacritty.yml'
