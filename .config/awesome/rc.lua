@@ -16,6 +16,8 @@
 		local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
 		-- batery
 		local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
+		-- calendar
+		local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
 		-- Theme handling library
 		local beautiful = require("beautiful")
 		-- Notification library
@@ -120,8 +122,6 @@
 		end
 
 
-		mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-				menu = mymainmenu })
 
 
 		-- Keyboard map indicator and switcher
@@ -130,6 +130,13 @@
 		-- {{{ Wibar
 		-- Create a textclock widget
 		mytextclock = wibox.widget.textclock()
+
+		local cw = calendar_widget({theme = 'outrun'})
+
+		mytextclock:connect_signal("button::press",
+						function(_, _, _, button)
+								  if button == 1 then cw.toggle() end
+						end)
 
 		-- Create a wibox for each screen and add it
 		local taglist_buttons = gears.table.join(
