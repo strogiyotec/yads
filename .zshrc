@@ -1,14 +1,17 @@
 #XDG variables
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
 #Default variables
 		export EDITOR=nvim
 		export READER="zathura"
 		export TERMINAL="alacritty"
+		export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 		#Change native image path
 		export NATIVE_IMAGE_USER_HOME="$XDG_DATA_HOME/native-image/"
 		#Change files for various history files
 		export NODE_REPL_HISTORY="$XDG_DATA_HOME/node/history"
+		export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
 		export CQL_HISTORY="$XDG_DATA_HOME/cassandra"
 		export PSQL_HISTORY="$XDG_DATA_HOME/psql/history"
 		export LEDGER_FILE="$XDG_DATA_HOME/hledger/2020.journal"
