@@ -8,6 +8,14 @@
 		require("awful.autofocus")
 		-- Widget and layout library
 		local wibox = require("wibox")
+		-- cpu
+		local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
+		-- bright
+		local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightness")
+		-- volume
+		local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
+		-- batery
+		local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
 		-- Theme handling library
 		local beautiful = require("beautiful")
 		-- Notification library
@@ -225,6 +233,10 @@
 								{ -- Right widgets
 										layout = wibox.layout.fixed.horizontal,
 										mykeyboardlayout,
+										batteryarc_widget(),
+										cpu_widget({width = 70,color = '#13ec0c'}),
+										brightness_widget(),
+										volume_widget({display_notification = true}),
 										wibox.widget.systray(),
 										mytextclock,
 										s.mylayoutbox,
@@ -264,8 +276,8 @@ globalkeys = gears.table.join(
 		end,
 		{description = "focus previous by index", group = "client"}
 		),
-		awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
-		{description = "show main menu", group = "awesome"}),
+		-- awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
+		-- {description = "show main menu", group = "awesome"}),
 
 		-- Layout manipulation
 		awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
@@ -276,7 +288,7 @@ globalkeys = gears.table.join(
 		{description = "focus the next screen", group = "screen"}),
 		awful.key({  "Control" }, "k", function () awful.screen.focus_relative(-1) end,
 		{description = "focus the previous screen", group = "screen"}),
-		awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
+		awful.key({ "Mod1",           }, "u", awful.client.urgent.jumpto,
 		{description = "jump to urgent client", group = "client"}),
 		awful.key({ "Mod1",           }, "Tab",
 		function ()
@@ -286,7 +298,7 @@ globalkeys = gears.table.join(
 		end
 		end,
 		{description = "go back", group = "client"}),
-
+		
 		-- Standard program
 		awful.key({modkey,  "Mod1"}, "t", function () awful.spawn(terminal) end,
 		{description = "open a terminal", group = "launcher"}),
@@ -312,6 +324,18 @@ globalkeys = gears.table.join(
 		awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
 		{description = "select previous", group = "layout"}),
 
+		-- Brightnes
+		awful.key({          }, "XF86MonBrightnessUp", function () awful.spawn("light -A 5") end, 
+		{description = "increase brightness", group = "custom"}),
+		awful.key({}, "XF86MonBrightnessDown", function () awful.spawn("light -U 5") end, 
+		{description = "decrease brightness", group = "custom"}),
+		
+		--Audio
+		awful.key({},'XF86AudioRaiseVolume',volume_widget.raise,
+		{description = 'volume up', group = 'hotkeys'}),
+		awful.key({},'XF86AudioLowerVolume',volume_widget.lower,{description = 'volume down', group = 'hotkeys'}),
+		 awful.key({},'XF86AudioMute',volume_widget.toggle,{description = 'toggle mute', group = 'hotkeys'}),
+		
 		awful.key({ modkey, "Control" }, "n",
 				function ()
 						local c = awful.client.restore()
@@ -354,14 +378,14 @@ globalkeys = gears.table.join(
 		c:raise()
 		end,
 		{description = "toggle fullscreen", group = "client"}),
-		-- awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
-		-- {description = "close", group = "client"}),
+		awful.key({ modkey, "Shift"   }, "w",      function (c) c:kill()                         end,
+		{description = "close", group = "client"}),
 		awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
 		{description = "toggle floating", group = "client"}),
 		awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
 		{description = "move to master", group = "client"}),
-		awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
-		{description = "move to screen", group = "client"}),
+		-- awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
+		-- {description = "move to screen", group = "client"}),
 		awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end,
 		{description = "toggle keep on top", group = "client"}),
 		awful.key({ modkey,           }, "n",
@@ -464,6 +488,16 @@ globalkeys = gears.table.join(
 		awful.rules.rules = {
 		-- All clients will match this rule.
 		{ rule = { },
+		{
+		  rule = {class = "jetbrains-.*",}, properties = { focus = true, buttons = clientbuttons_jetbrains }
+        },
+        {
+          rule = {class = "jetbrains-.*",name = "win.*"}, 
+				properties = { 
+				titlebars_enabled = false, focusable = false,
+				focus = true, floating = true, placement = awful.placement.restore 
+				}
+        },
 		properties = { border_width = beautiful.border_width,
 		border_color = beautiful.border_normal,
 		focus = awful.client.focus.filter,

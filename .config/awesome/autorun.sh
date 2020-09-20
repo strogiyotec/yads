@@ -8,6 +8,6 @@ function run {
 }
 run compton
 run safeeyes
-run nitrogen --restore
+#run nitrogen --restore
 run setsid greenclip daemon  >/dev/null 2>&1 < /dev/null &
 run setxkbmap -layout "us,ru"
