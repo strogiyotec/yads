@@ -43,7 +43,7 @@ alias img='~/.config/scripts/img.sh'
 alias fzf_search='~/.config/scripts/fzf_search.sh'
 alias zaread='$HOME/.config/zaread/zaread/zaread'
 alias vocabulary='sc-im ~/Documents/Dictionary/words.sc'
-alias green='setsid ~/.config/scripts/greenclip daemon  >/dev/null 2>&1 < /dev/null &'
+#alias green='setsid ~/.config/scripts/greenclip daemon  >/dev/null 2>&1 < /dev/null &'
 
 #Jump to dir 
 alias scr='cd ~/.config/scripts'
