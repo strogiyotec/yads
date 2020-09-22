@@ -25,8 +25,10 @@ set inccommand=split "interactive search replace
 		Plug 'gruvbox-community/gruvbox'
 		"Lua syntax
 		Plug 'tbastos/vim-lua'
+		Plug 'arzg/vim-colors-xcode'
 		"Palen
 		Plug 'drewtempelmeyer/palenight.vim'
+		Plug 'arcticicestudio/nord-vim'
 "Notes	
 		"Vimwiki
 		Plug 'vimwiki/vimwiki'
@@ -76,7 +78,7 @@ nmap <Leader>gm :GitMessenger<CR>
 		if (has("termguicolors"))
 				set termguicolors
 		endif
-		colorscheme palenight
+		colorscheme xcodedark
 		"fix theme when inside tmux
 		set t_Co=256
 		set background=dark		
@@ -163,7 +165,7 @@ nmap <Leader>gm :GitMessenger<CR>
 
 "Airline
 		let g:airline_detect_modified=1
-		let g:airline_theme='palenight'
+		let g:airline_theme='nord'
 		let g:airline#extensions#po#enabled = 0
 		let g:airline#extensions#whitespace#enabled = 0
 		
