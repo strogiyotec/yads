@@ -15,11 +15,13 @@
 		-- volume
 		local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
 		-- batery
-		local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
+		local batteryarc_widget = require("awesome-wm-widgets.battery-widget.battery")
 		-- calendar
 		local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
 		-- Theme handling library
 		local beautiful = require("beautiful")
+		-- Todo
+		local todo_widget = require("awesome-wm-widgets.todo-widget.todo")
 		-- Notification library
 		local naughty = require("naughty")
 		local hotkeys_popup = require("awful.hotkeys_popup")
@@ -198,7 +200,7 @@
 				set_wallpaper(s)
 
 				-- Each screen has its own tag table.
-				awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+				awful.tag({ "1", "2", "3" }, s, awful.layout.layouts[1])
 
 				-- Create a promptbox for each screen
 				s.mypromptbox = awful.widget.prompt()
@@ -221,7 +223,12 @@
 						s.mytasklist = awful.widget.tasklist {
 								screen  = s,
 								filter  = awful.widget.tasklist.filter.currenttags,
-								buttons = tasklist_buttons
+								buttons = tasklist_buttons,
+								style    = {
+										    shape_border_width = 1,
+    									    shape_border_color = '#777777',
+    									    shape  = gears.shape.rounded_bar,
+										 }
 						}
 
 						-- Create the wibox
@@ -238,15 +245,16 @@
 								},
 								s.mytasklist, -- Middle widget
 								{ -- Right widgets
-										layout = wibox.layout.fixed.horizontal,
 										mykeyboardlayout,
-										batteryarc_widget(),
-										cpu_widget({width = 70,color = '#13ec0c'}),
-										brightness_widget(),
 										volume_widget({display_notification = true}),
+										layout = wibox.layout.fixed.horizontal,
+										todo_widget(),
+										batteryarc_widget(),
+										cpu_widget({color = '#13ec0c'}),
+										brightness_widget(),
 										wibox.widget.systray(),
 										mytextclock,
-										s.mylayoutbox,
+										s.mylayoutbox
 								},
 						}
 				end)
@@ -262,8 +270,8 @@
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
-		awful.key({ modkey,           }, "h",      hotkeys_popup.show_help,
-				{description="show help", group="awesome"}),
+		-- awful.key({ modkey,           }, "h",      hotkeys_popup.show_help,
+		-- 		{description="show help", group="awesome"}),
 		awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
 				{description = "view previous", group = "tag"}),
 		awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
@@ -271,17 +279,10 @@ globalkeys = gears.table.join(
 		awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
 				{description = "go back", group = "tag"}),
 
-		awful.key({ modkey,           }, "j",
-		function ()
-		awful.client.focus.byidx( 1)
-		end,
-		{description = "focus next by index", group = "client"}
-		),
-		awful.key({ modkey,           }, "k",
-		function ()
-		awful.client.focus.byidx(-1)
-		end,
-		{description = "focus previous by index", group = "client"}
+		awful.key({ modkey,           }, "j",function () awful.client.focus.byidx( 1)
+		end,{description = "focus next by index", group = "client"}),
+		awful.key({ modkey,           }, "k",function () awful.client.focus.byidx(-1)
+		end,{description = "focus previous by index", group = "client"}
 		),
 		-- awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
 		-- {description = "show main menu", group = "awesome"}),
@@ -291,10 +292,10 @@ globalkeys = gears.table.join(
 		{description = "swap with next client by index", group = "client"}),
 		awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end,
 		{description = "swap with previous client by index", group = "client"}),
-		awful.key({  "Control" }, "j", function () awful.screen.focus_relative( 1) end,
-		{description = "focus the next screen", group = "screen"}),
-		awful.key({  "Control" }, "k", function () awful.screen.focus_relative(-1) end,
-		{description = "focus the previous screen", group = "screen"}),
+		-- awful.key({  "Control" }, "j", function () awful.screen.focus_relative( 1) end,
+		-- {description = "focus the next screen", group = "screen"}),
+		-- awful.key({  "Control" }, "k", function () awful.screen.focus_relative(-1) end,
+		-- {description = "focus the previous screen", group = "screen"}),
 		awful.key({ "Mod1",           }, "u", awful.client.urgent.jumpto,
 		{description = "jump to urgent client", group = "client"}),
 		awful.key({ "Mod1",           }, "Tab",
@@ -336,6 +337,12 @@ globalkeys = gears.table.join(
 		{description = "increase brightness", group = "custom"}),
 		awful.key({}, "XF86MonBrightnessDown", function () awful.spawn("light -U 5") end, 
 		{description = "decrease brightness", group = "custom"}),
+
+		-- switch language layout
+		awful.key({ "Shift" }, "Alt_L", function () mykeyboardlayout.next_layout(); end,
+		{description = "change language layout"}),
+		awful.key({ "Mod1" }, "Shift_L", function () mykeyboardlayout.next_layout(); end,
+		{description="change language layout"}),
 		
 		--Audio
 		awful.key({},'XF86AudioRaiseVolume',volume_widget.raise,
@@ -358,6 +365,13 @@ globalkeys = gears.table.join(
 		--Screen
 		 awful.key({ }, "Print", function () awful.util.spawn("flameshot gui -d 1000", false) end),
 
+		-- Move window
+		awful.key({ modkey, "Mod1"    }, "Right",     function () awful.tag.incmwfact( 0.01)    end),
+awful.key({ modkey, "Mod1"    }, "Left",     function () awful.tag.incmwfact(-0.01)    end),
+awful.key({ modkey, "Mod1"    }, "Down",     function () awful.client.incwfact( 0.01)    end),
+awful.key({ modkey, "Mod1"    }, "Up",     function () awful.client.incwfact(-0.01)    end),
+
+
 		-- Prompt
 		awful.key({ "Mod1"},            "a",     function () 
 				awful.util.spawn("rofi -show drun")	end,
@@ -365,18 +379,21 @@ globalkeys = gears.table.join(
 
 		awful.key({ "Mod1" },            "p",     function () 
 				awful.util.spawn("rofi -modi \"clipboard:greenclip print\" -show clipboard -run-command '{cmd}'")	end,
-				{description = "run prompt", group = "launcher"}),
+				{description = "run prompt", group = "launcher"})
 
-		awful.key({ modkey }, "x",
-		function ()
-		awful.prompt.run {
-		prompt       = "Run Lua code: ",
-		textbox      = awful.screen.focused().mypromptbox.widget,
-		exe_callback = awful.util.eval,
-		history_path = awful.util.get_cache_dir() .. "/history_eval"
-		}
-		end,
-		{description = "lua execute prompt", group = "awesome"}))
+		-- awful.key({ modkey }, "x",
+		-- function ()
+		-- awful.prompt.run {
+		-- prompt       = "Run Lua code: ",
+		-- textbox      = awful.screen.focused().mypromptbox.widget,
+		-- exe_callback = awful.util.eval,
+		-- history_path = awful.util.get_cache_dir() .. "/history_eval"
+		-- }
+		-- end,
+		-- {description = "lua execute prompt", group = "awesome"})
+
+		)
+
 
 		clientkeys = gears.table.join(
 		awful.key({ "Mod1",           }, "f",
