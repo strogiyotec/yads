@@ -12,3 +12,4 @@ run safeeyes
 #run setsid greenclip daemon  >/dev/null 2>&1 < /dev/null &
 run greenclip daemon
 run setxkbmap -layout "us,ru"
+run ssh-add
