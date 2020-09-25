@@ -6,6 +6,7 @@
 		local gears = require("gears")
 		local awful = require("awful")
 		require("awful.autofocus")
+		--require("collision")()
 		-- Widget and layout library
 		local wibox = require("wibox")
 		-- cpu
@@ -76,12 +77,12 @@
 
 		-- Table of layouts to cover with awful.layout.inc, order matters.
 		awful.layout.layouts = {
-				awful.layout.suit.spiral.dwindle,
-				awful.layout.suit.floating,
 				awful.layout.suit.tile,
 				awful.layout.suit.tile.left,
 				awful.layout.suit.tile.bottom,
 				awful.layout.suit.tile.top,
+				awful.layout.suit.spiral.dwindle,
+				awful.layout.suit.floating,
 				awful.layout.suit.fair,
 				awful.layout.suit.fair.horizontal,
 				awful.layout.suit.spiral,
@@ -399,7 +400,6 @@ awful.key({ modkey, "Mod1"    }, "Up",     function () awful.client.incwfact(-0.
 		awful.key({ "Mod1",           }, "f",
 		function (c)
 		c.fullscreen = not c.fullscreen
-		c:raise()
 		end,
 		{description = "toggle fullscreen", group = "client"}),
 		awful.key({ modkey, "Shift"   }, "w",      function (c) c:kill()                         end,
@@ -503,6 +503,11 @@ awful.key({ modkey, "Mod1"    }, "Up",     function () awful.client.incwfact(-0.
 		end)
 		)
 
+		clientbuttons_jetbrains = gears.table.join(
+		    awful.button({ modkey }, 1, awful.mouse.client.move),
+		awful.button({ modkey }, 3, awful.mouse.client.resize)
+		)
+
 		-- Set keys
 		root.keys(globalkeys)
 		-- }}}
@@ -513,10 +518,11 @@ awful.key({ modkey, "Mod1"    }, "Up",     function () awful.client.incwfact(-0.
 		-- All clients will match this rule.
 		{ rule = { },
 		{
-		  rule = {class = "jetbrains-.*",}, properties = { focus = true, buttons = clientbuttons_jetbrains }
+		  rule = {class = "jetbrains-.*",instance="un-awt-X11-XWindowPeer",name="win.*"},
+						properties = { focus = true, buttons = clientbuttons_jetbrains }
         },
         {
-          rule = {class = "jetbrains-.*",name = "win.*"}, 
+          rule = {class = "jetbrains-.*",instance="un-awt-X11-XWindowPeer",name = "win.*"}, 
 				properties = { 
 				titlebars_enabled = false, focusable = false,
 				focus = true, floating = true, placement = awful.placement.restore 
