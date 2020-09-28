@@ -28,7 +28,10 @@ set inccommand=split "interactive search replace
 		Plug 'arzg/vim-colors-xcode'
 		"Palen
 		Plug 'drewtempelmeyer/palenight.vim'
+		"Nord
 		Plug 'arcticicestudio/nord-vim'
+		" Show hex colors
+		Plug 'chrisbra/Colorizer'
 "Notes	
 		"Vimwiki
 		Plug 'vimwiki/vimwiki'
@@ -78,7 +81,7 @@ nmap <Leader>gm :GitMessenger<CR>
 		if (has("termguicolors"))
 				set termguicolors
 		endif
-		colorscheme xcodedark
+		colorscheme nord
 		"fix theme when inside tmux
 		set t_Co=256
 		set background=dark		

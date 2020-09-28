@@ -13,3 +13,5 @@ run safeeyes
 run greenclip daemon
 run setxkbmap -layout "us,ru"
 run ssh-add
+run nm-applet
+
