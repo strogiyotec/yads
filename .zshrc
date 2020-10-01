@@ -16,13 +16,14 @@ export XDG_CACHE_HOME="$HOME/.cache"
 		export PSQL_HISTORY="$XDG_DATA_HOME/psql/history"
 		export LEDGER_FILE="$XDG_DATA_HOME/hledger/2020.journal"
 		export LESSHISTFILE="$XDG_DATA_HOME/less/.lesshst"
-
+		export DSTASK_GIT_REPO="$XDG_DATA_HOME/.dstask/"
 #Themes
 source $XDG_CONFIG_HOME/zsh/af-magic.zsh-theme
 
 # Don't freeze terminal on Ctrl+S
 stty stop undef
-
+		#dstask
+		source $XDG_CONFIG_HOME/zsh/dstask.sh
 #ZSH config
 		autoload -U compinit
 		zstyle ':completion:*' menu select
@@ -42,8 +43,6 @@ stty stop undef
 #Sources
 		#vim
 		source $XDG_CONFIG_HOME/zsh/vim_completion.sh
-		#sdkman
-		source $HOME/.sdkman/bin/sdkman-init.sh
 		#aliases
 		source $XDG_CONFIG_HOME/bash/.bash_aliases
 		#secret aliases
@@ -52,7 +51,8 @@ stty stop undef
 		source $XDG_CONFIG_HOME/bash/.fzf.bash
 		#autojump
 		source $XDG_CONFIG_HOME/zsh/autojump.zsh
-
+		#sdkman
+		source $HOME/.sdkman/bin/sdkman-init.sh
 #fix man
 export MAN_DISABLE_SECCOMP=1
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
@@ -79,6 +79,7 @@ bindkey -s '^o' 'rangercd\n'
 		[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 		[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Ocaml
 eval `opam env`
 
 # auto suggestion
