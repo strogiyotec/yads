@@ -20,6 +20,8 @@ set inccommand=split "interactive search replace
 		Plug 'junegunn/gv.vim'
 		"Undo tree
 		Plug 'mbbill/undotree'
+		"Marks
+		Plug 'kshenoy/vim-signature'
 "Themes
 		"Gruvbox
 		Plug 'gruvbox-community/gruvbox'
@@ -104,8 +106,10 @@ nmap <Leader>gm :GitMessenger<CR>
         inoremap <esc>c <right>
         inoremap <esc>d <left>
 		"\+ and \- change vertical window size
-		noremap <silent> <Leader>+ :vertical resize +5<CR>
-		noremap <silent> <Leader>- :vertical resize -5<CR>
+		noremap <silent> <Leader>h :vertical -5<CR>
+		noremap <silent> <Leader>l :vertical +5<CR>
+		noremap <silent> <Leader>j :resize +5<CR>
+		noremap <silent> <Leader>k :resize -5<CR>
 
 "Utils
 		"\o will create new line without switching to insert mode
