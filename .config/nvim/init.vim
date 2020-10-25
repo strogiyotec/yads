@@ -84,7 +84,7 @@ nmap <Leader>gm :GitMessenger<CR>
 		if (has("termguicolors"))
 				set termguicolors
 		endif
-		colorscheme one
+		colorscheme gruvbox
 		"fix theme when inside tmux
 		set t_Co=256
 		set background=dark		
@@ -135,6 +135,9 @@ nmap <Leader>gm :GitMessenger<CR>
 		nnoremap <leader>P "+P
 		vnoremap <leader>p "+p
 		vnoremap <leader>P "+P
+		
+		"Cd into current directory
+		nmap <leader>cd :cd %:p:h<CR>
 	
 		" Ctrl+s saves changes
 		nmap <C-s> :w<CR>
