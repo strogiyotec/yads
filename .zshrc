@@ -57,6 +57,8 @@ stty stop undef
 export MAN_DISABLE_SECCOMP=1
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
+# nnn
+export NNN_FIFO=/tmp/nnn.fifo
 
 # Ctrl+e edit command in editor
 autoload edit-command-line; zle -N edit-command-line
@@ -79,8 +81,11 @@ bindkey -s '^o' 'rangercd\n'
 		[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 		[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Ocaml
-eval `opam env`
+
+if [ -d "$HOME/Java/android-studio" ] ; then
+  PATH="$PATH:$HOME/Java/android-studio/bin"
+fi
+
 
 # auto suggestion
 source $XDG_CONFIG_HOME/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
