@@ -224,7 +224,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "upwork", "idea", "browser", "term" }, s, awful.layout.layouts[1])
+    awful.tag({ "upwork", "idea", "browser", "term","zoom" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -304,8 +304,8 @@ root.buttons(gears.table.join(
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
--- awful.key({ modkey,           }, "h",      hotkeys_popup.show_help,
--- 		{description="show help", group="awesome"}),
+awful.key({ modkey,  "Mod1"}, "h",      hotkeys_popup.show_help,
+		{description="show help", group="awesome"}),
         awful.key({ modkey, }, "Left", awful.tag.viewprev,
                 { description = "view previous", group = "tag" }),
         awful.key({ modkey, }, "Right", awful.tag.viewnext,
@@ -375,18 +375,18 @@ globalkeys = gears.table.join(
             awful.tag.incnmaster(-1, nil, true)
         end,
                 { description = "decrease the number of master clients", group = "layout" }),
-        awful.key({ modkey, "Control" }, "h", function()
+        awful.key({ modkey, "Mod4" }, "h", function()
             awful.tag.incncol(1, nil, true)
         end,
                 { description = "increase the number of columns", group = "layout" }),
-        awful.key({ modkey, "Control" }, "l", function()
+        awful.key({ modkey, "Mod4" }, "l", function()
             awful.tag.incncol(-1, nil, true)
         end,
-        -- {description = "decrease the number of columns", group = "layout"}),
+        {description = "decrease the number of columns", group = "layout"}),
         -- awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
         -- {description = "select next", group = "layout"}),
         -- awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
-                { description = "select previous", group = "layout" }),
+                -- { description = "select previous", group = "layout" }),
 
 -- Brightnes
         awful.key({          }, "XF86MonBrightnessUp", function()
@@ -599,21 +599,6 @@ root.keys(globalkeys)
 awful.rules.rules = {
     -- All clients will match this rule.
     { rule = { },
-      {
-          rule = { class = "upwork.*", instance = "un-awt-X11-XWindowPeer", name = "win.*" },
-          properties = { focus = true, buttons = clientbuttons_jetbrains }
-      },
-      {
-          rule = { class = "jetbrains-.*", instance = "un-awt-X11-XWindowPeer", name = "win.*" },
-          properties = { focus = true, buttons = clientbuttons_jetbrains }
-      },
-      {
-          rule = { class = "jetbrains-.*", instance = "un-awt-X11-XWindowPeer", name = "win.*" },
-          properties = {
-              titlebars_enabled = false, focusable = false,
-              focus = true, floating = true, placement = awful.placement.restore
-          }
-      },
       properties = { border_width = beautiful.border_width,
                      border_color = beautiful.border_normal,
                      focus = awful.client.focus.filter,
@@ -624,7 +609,20 @@ awful.rules.rules = {
                      placement = awful.placement.no_overlap + awful.placement.no_offscreen
       }
     },
-
+	{
+      rule = { class = "jetbrains-.*",},
+		properties = { focus = true, buttons = clientbuttons_jetbrains }
+    },
+    {
+      rule = { class = "jetbrains-.*", name = "win.*"},
+		properties = {
+				titlebars_enabled = false, 
+				focusable = false, 
+				focus = true, 
+				floating = true, 
+				placement = awful.placement.restore 
+		}
+    },
     -- Floating clients.
     { rule_any = {
         instance = {
