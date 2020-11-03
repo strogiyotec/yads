@@ -27,11 +27,7 @@ set inccommand=split "interactive search replace
 		Plug 'gruvbox-community/gruvbox'
 		"Lua syntax
 		Plug 'tbastos/vim-lua'
-		Plug 'arzg/vim-colors-xcode'
-		"Palen
-		Plug 'drewtempelmeyer/palenight.vim'
-		"Nord
-		Plug 'arcticicestudio/nord-vim'
+		"Atom
 		Plug 'rakr/vim-one'
 		" Show hex colors
 		Plug 'chrisbra/Colorizer'
@@ -71,6 +67,8 @@ set inccommand=split "interactive search replace
 		Plug 'itchyny/calendar.vim'
 		"Emmet
 		Plug 'mattn/emmet-vim'
+		"Elixir
+		Plug 'elixir-editors/vim-elixir'
 		"Cocnvim
 		Plug 'neoclide/coc.nvim', {'branch': 'release'}
 		call plug#end()
@@ -80,7 +78,7 @@ nmap <Leader>gm :GitMessenger<CR>
 
 "Color schema
 		"set default color theme
-		let g:palenight_terminal_italics=1
+		let g:gruvbox_italic=1
 		if (has("termguicolors"))
 				set termguicolors
 		endif
