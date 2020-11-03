@@ -302,6 +302,14 @@ root.buttons(gears.table.join(
 ))
 -- }}}
 
+confirmQuitmenu = awful.menu(
+		{ items = { 
+				{ "Cancel", function() do end end },
+		  	       	    { "Quit", function() awesome.quit() end }
+				}
+        }
+)
+
 -- {{{ Key bindings
 globalkeys = gears.table.join(
 awful.key({ modkey,  "Mod1"}, "h",      hotkeys_popup.show_help,
@@ -356,9 +364,8 @@ awful.key({ modkey,  "Mod1"}, "h",      hotkeys_popup.show_help,
                 { description = "open a terminal", group = "launcher" }),
         awful.key({ "Mod1", "Control" }, "r", awesome.restart, -- alt ctrl r
                 { description = "reload awesome", group = "awesome" }),
-        awful.key({ modkey, "Shift" }, "q", awesome.quit,
-                { description = "quit awesome", group = "awesome" }),
-
+		awful.key({ modkey, "Shift"   }, "q", function () confirmQuitmenu:show() end,
+              {description = "Confirm Awesome wm exit", group = "awesome"}),
         awful.key({ modkey, }, "l", function()
             awful.tag.incmwfact(0.05)
         end,
