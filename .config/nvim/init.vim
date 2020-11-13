@@ -41,9 +41,11 @@ set inccommand=split "interactive search replace
 		Plug 'junegunn/goyo.vim'
 		"Grammar
 		Plug 'rhysd/vim-grammarous'
+"Window resize
+		Plug 'camspiers/animate.vim'
+		Plug 'camspiers/lens.vim'
+
 "Coding
-		"Http
-		Plug 'bayne/vim-dot-http'
 		"Vim go
 		Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 		"Ctrl+f for search
@@ -61,6 +63,8 @@ set inccommand=split "interactive search replace
 		Plug 'godlygeek/tabular'
 		"Add smooth scrolling
 		Plug 'psliwka/vim-smoothie'
+		"Files
+		Plug 'lambdalisue/fern.vim'
 		"s and S for search
 		Plug 'justinmk/vim-sneak'
 		"Calendar
@@ -208,6 +212,10 @@ nmap <Leader>gm :GitMessenger<CR>
 		let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
 		"Hide status bar inside vim
 		"autocmd VimEnter,VimLeave * silent !tmux set status
+" File explorer
+let g:fern#default_hidden=1
+let g:fern#default_exclude = '^\%(\.git\|\.byebug\)$'
+		nnoremap <leader>f :Fern . -drawer<cr>
 "Source external configs
 		"Emmet
 		source ~/.config/nvim/emmet.vim
