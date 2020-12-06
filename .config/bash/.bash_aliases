@@ -53,7 +53,7 @@ alias cfs='git --git-dir=$HOME/.cfg/ --work-tree=$HOME status'
 alias confa='git --git-dir=$HOME/.cfg/ --work-tree=$HOME add'
 
 #Sdkman
-alias sdkj11='sdk default java 20.0.0.r11-grl'
+alias sdkj11='sdk default java 20.2.0.r11-grl'
 alias sdkj8='sdk default java 8.0.252.hs-adpt'
 
 #Shortcuts
@@ -68,3 +68,9 @@ alias v='nvim'
 alias top='gotop'
 alias presentation='mdp'
 alias u='ultralist'
+
+
+#Todo list
+alias uln='u l --notes'
+alias ulng='u l group:context'
+alias ull='u l context:leetcode'
