@@ -41,9 +41,6 @@ set inccommand=split "interactive search replace
 		Plug 'junegunn/goyo.vim'
 		"Grammar
 		Plug 'rhysd/vim-grammarous'
-"Window resize
-		Plug 'camspiers/animate.vim'
-		Plug 'camspiers/lens.vim'
 
 "Coding
 		"Vim go
@@ -86,10 +83,11 @@ nmap <Leader>gm :GitMessenger<CR>
 		if (has("termguicolors"))
 				set termguicolors
 		endif
-		colorscheme gruvbox
+		let g:gruvbox_contrast_dark='hard'
+		set background=dark		
+        colorscheme gruvbox
 		"fix theme when inside tmux
 		set t_Co=256
-		set background=dark		
 		"Add transparency
 		hi Normal guibg=NONE ctermbg=NONE
 "Limelight
@@ -145,6 +143,9 @@ nmap <Leader>gm :GitMessenger<CR>
 		nmap <C-s> :w<CR>
 		"Run xrdb whenever Xdefaults or Xresources are updated.
 		autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
+
+		set tabstop=4       " number of visual spaces per TAB
+		set softtabstop=4   " number of spaces in tab when editing
 "Rainbow
 		"enable brackets for all files
 		let g:rainbow_active=1
@@ -212,6 +213,7 @@ nmap <Leader>gm :GitMessenger<CR>
 		let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
 		"Hide status bar inside vim
 		"autocmd VimEnter,VimLeave * silent !tmux set status
+
 " File explorer
 let g:fern#default_hidden=1
 let g:fern#default_exclude = '^\%(\.git\|\.byebug\)$'
