@@ -37,6 +37,9 @@ local has_fdo, freedesktop = pcall(require, "freedesktop")
 -- lain
 local lain = require("lain")
 
+local separators = lain.util.separators
+local arrow = separators.arrow_left
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -282,15 +285,72 @@ awful.screen.connect_for_each_screen(function(s)
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
-            mykeyboardlayout,
-            volume_widget({ display_notification = true }),
+			arrow("alpha", "#7197E7"),
+		    wibox.container.background(
+					wibox.container.margin(
+						wibox.widget {
+								mykeyboardlayout,
+								layout = wibox.layout.align.horizontal 
+						}, 3, 6
+				     ),
+			 "#7197E7"),
+		    arrow("#7197E7", "#763782"),
+		    wibox.container.background(
+				wibox.container.margin(
+						wibox.widget {
+								volume_widget({ display_notification = true }),
+								layout = wibox.layout.align.horizontal }, 2, 3
+						),
+				"#763782"),
             layout = wibox.layout.fixed.horizontal,
-            todo_widget(),
-            battery_widget(),
-            cpu_widget({ color = '#13ec0c' }),
-            brightness_widget(),
-            wibox.widget.systray(),
-            mytextclock,
+			arrow("#763782", "#7197E7"),
+		    wibox.container.background(
+				wibox.container.margin(
+						wibox.widget {
+								todo_widget(),
+							    layout = wibox.layout.align.horizontal 
+						}, 2, 3
+				), "#7197E7"),
+		    arrow("#7197E7", "#763782"),
+		    wibox.container.background(
+				wibox.container.margin(
+						wibox.widget {
+								battery_widget(),
+							    layout = wibox.layout.align.horizontal 
+						}, 3, 4
+				), "#763782"),
+			arrow("#763782", "#0d0c0c"),
+		    wibox.container.background(
+				wibox.container.margin(
+						wibox.widget {
+								cpu_widget({ color = '#13ec0c' }),
+							    layout = wibox.layout.align.horizontal 
+						}, 4, 4
+				), "#0d0c0c"),
+			arrow("#0d0c0c", "#7197E7"),
+		    wibox.container.background(
+				wibox.container.margin(
+						wibox.widget {
+								brightness_widget(),
+							    layout = wibox.layout.align.horizontal 
+						}, 4, 4
+				), "#7197E7"),
+			arrow("#7197E7", "#0d0c0c"),
+		    wibox.container.background(
+				wibox.container.margin(
+						wibox.widget {
+								wibox.widget.systray(),
+							    layout = wibox.layout.align.horizontal 
+						}, 4, 4
+				), "#0d0c0c"),
+			arrow("#0d0c0c", "#763782"),
+		    wibox.container.background(
+				wibox.container.margin(
+						wibox.widget {
+								mytextclock,
+							    layout = wibox.layout.align.horizontal 
+						}, 4, 4
+				), "#763782"),
             s.mylayoutbox
         },
     }
