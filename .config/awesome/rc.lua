@@ -285,7 +285,8 @@ awful.screen.connect_for_each_screen(function(s)
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
-			arrow("alpha", "#7197E7"),
+		    wibox.widget.systray(),
+		    arrow("alpha", "#0D4F8B"),
 		    wibox.container.background(
 					wibox.container.margin(
 						wibox.widget {
@@ -293,8 +294,8 @@ awful.screen.connect_for_each_screen(function(s)
 								layout = wibox.layout.align.horizontal 
 						}, 3, 6
 				     ),
-			 "#7197E7"),
-		    arrow("#7197E7", "#763782"),
+			 "#0D4F8B"),
+		    arrow("#0D4F8B", "#763782"),
 		    wibox.container.background(
 				wibox.container.margin(
 						wibox.widget {
@@ -303,15 +304,15 @@ awful.screen.connect_for_each_screen(function(s)
 						),
 				"#763782"),
             layout = wibox.layout.fixed.horizontal,
-			arrow("#763782", "#7197E7"),
+			arrow("#763782", "#0D4F8B"),
 		    wibox.container.background(
 				wibox.container.margin(
 						wibox.widget {
 								todo_widget(),
 							    layout = wibox.layout.align.horizontal 
 						}, 2, 3
-				), "#7197E7"),
-		    arrow("#7197E7", "#763782"),
+				), "#0D4F8B"),
+		    arrow("#0D4F8B", "#763782"),
 		    wibox.container.background(
 				wibox.container.margin(
 						wibox.widget {
@@ -327,23 +328,15 @@ awful.screen.connect_for_each_screen(function(s)
 							    layout = wibox.layout.align.horizontal 
 						}, 4, 4
 				), "#0d0c0c"),
-			arrow("#0d0c0c", "#7197E7"),
+			arrow("#0d0c0c", "#0D4F8B"),
 		    wibox.container.background(
 				wibox.container.margin(
 						wibox.widget {
 								brightness_widget(),
 							    layout = wibox.layout.align.horizontal 
 						}, 4, 4
-				), "#7197E7"),
-			arrow("#7197E7", "#0d0c0c"),
-		    wibox.container.background(
-				wibox.container.margin(
-						wibox.widget {
-								wibox.widget.systray(),
-							    layout = wibox.layout.align.horizontal 
-						}, 4, 4
-				), "#0d0c0c"),
-			arrow("#0d0c0c", "#763782"),
+				), "#0D4F8B"),
+			arrow("#0D4F8B", "#763782"),
 		    wibox.container.background(
 				wibox.container.margin(
 						wibox.widget {
