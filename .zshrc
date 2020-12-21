@@ -86,6 +86,7 @@ if [ -d "$HOME/Java/android-studio" ] ; then
   PATH="$PATH:$HOME/Java/android-studio/bin"
 fi
 
+source $HOME/.cargo/env
 
 # auto suggestion
 source $XDG_CONFIG_HOME/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
