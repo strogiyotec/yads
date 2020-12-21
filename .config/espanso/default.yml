@@ -11,8 +11,17 @@ matches:
   - trigger: ":id"
     replace: "300324208"
 
+  - trigger: ":dt"
+    replace: "due:tom"
+
+  - trigger: ":lc"
+    replace: "leetcode"
+
   - trigger: ":email"
     replace: "almas337519@gmail.com"
+
+  - trigger: ":leett"
+    replace: "@leetcode due:tom"
 
   - trigger: ":zip"
     replace: "V3M 1M8"
