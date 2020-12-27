@@ -66,6 +66,8 @@ set inccommand=split "interactive search replace
 		Plug 'justinmk/vim-sneak'
 		"Calendar
 		Plug 'itchyny/calendar.vim'
+		"Split Join
+		Plug 'AndrewRadev/splitjoin.vim'
 		"Emmet
 		Plug 'mattn/emmet-vim'
 		"Elixir
@@ -80,12 +82,14 @@ nmap <Leader>gm :GitMessenger<CR>
 "Color schema
 		"set default color theme
 		let g:gruvbox_italic=1
+		let g:miramare_enable_italic = 1
+		let g:miramare_disable_italic_comment = 1
 		if (has("termguicolors"))
 				set termguicolors
 		endif
 		let g:gruvbox_contrast_dark='hard'
 		set background=dark		
-        colorscheme gruvbox
+        colorscheme one
 		"fix theme when inside tmux
 		set t_Co=256
 		"Add transparency
@@ -138,6 +142,9 @@ nmap <Leader>gm :GitMessenger<CR>
 		
 		"Cd into current directory
 		nmap <leader>cd :cd %:p:h<CR>
+
+		"Source config
+		nnoremap  <leader>s  :source ~/.config/nvim/init.vim<CR>
 	
 		" Ctrl+s saves changes
 		nmap <C-s> :w<CR>
