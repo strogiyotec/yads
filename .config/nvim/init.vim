@@ -3,6 +3,7 @@ set relativenumber   "add line number
 set incsearch        "start searching as soon as you type
 syntax enable        "highligh syntax
 set tabstop=4
+set guifont=JetBrains\ Mono,Delugia\ Nerd\ Font,FreeMono:h15
 set inccommand=split "interactive search replace
 "Plugins
 		call plug#begin('~/.config/nvim/plugged/')
@@ -89,7 +90,7 @@ nmap <Leader>gm :GitMessenger<CR>
 		endif
 		let g:gruvbox_contrast_dark='hard'
 		set background=dark		
-        colorscheme one
+        colorscheme gruvbox
 		"fix theme when inside tmux
 		set t_Co=256
 		"Add transparency
@@ -224,7 +225,8 @@ nmap <Leader>gm :GitMessenger<CR>
 " File explorer
 let g:fern#default_hidden=1
 let g:fern#default_exclude = '^\%(\.git\|\.byebug\)$'
-		nnoremap <leader>f :Fern . -drawer<cr>
+nnoremap <leader>f :Fern . -drawer<cr>
+
 "Source external configs
 		"Emmet
 		source ~/.config/nvim/emmet.vim
@@ -236,3 +238,8 @@ let g:fern#default_exclude = '^\%(\.git\|\.byebug\)$'
 		source ~/.config/nvim/coc.vim
 		"Wiki
 		source ~/.config/nvim/wiki.vim
+
+if exists('g:neovide')
+		set clipboard=unnamed
+		let g:neovide_cursor_vfx_mode = "ripple"
+endif
